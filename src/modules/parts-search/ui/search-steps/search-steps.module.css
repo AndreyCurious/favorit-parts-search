@@ -1,0 +1,62 @@
+.searchSteps {
+  display: flex;
+  gap: 38px;
+  padding: 27px 0;
+  list-style: none;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 30px;
+}
+
+.step {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #6a7584;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.stepNumber {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background: #e8ebef;
+  display: grid;
+  place-items: center;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.stepActive {
+  color: var(--ink);
+}
+
+.activeNumber {
+  background: var(--night);
+  color: white;
+}
+
+.doneNumber {
+  color: #268266;
+  background: #e1eee7;
+}
+
+@media (max-width: 600px) {
+  .searchSteps {
+    gap: 17px;
+    padding: 22px 0;
+    margin-bottom: 25px;
+  }
+
+  .step {
+    gap: 7px;
+    font-size: 10px;
+    flex: 1;
+  }
+
+  .stepNumber {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+  }
+}

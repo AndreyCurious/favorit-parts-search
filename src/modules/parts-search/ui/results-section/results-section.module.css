@@ -1,0 +1,72 @@
+.resultsSection {
+  margin-bottom: 36px;
+}
+
+.sectionHeading {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 17px;
+}
+
+.title {
+  font-size: 19px;
+  font-weight: 650;
+  margin: 0;
+  letter-spacing: -0.3px;
+}
+
+.article,
+.subtitle {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.subtitle {
+  margin-top: 8px;
+}
+
+.mono {
+  font-family: var(--mono);
+  font-weight: 400;
+}
+
+.countBadge {
+  display: inline-grid;
+  place-items: center;
+  min-width: 24px;
+  height: 24px;
+  padding-inline: 6px;
+  margin-left: 6px;
+  background: #e8ebef;
+  border-radius: 6px;
+  font-size: 11px;
+  vertical-align: middle;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .sectionHeading {
+    align-items: flex-start;
+  }
+
+  .title {
+    font-size: 17px;
+  }
+
+  .article {
+    max-width: 44%;
+    text-align: right;
+    font-size: 10px;
+    padding-top: 4px;
+  }
+}
+
+@media (max-width: 600px) {
+  .resultsSection {
+    margin-bottom: 28px;
+  }
+}

@@ -1,0 +1,10 @@
+:root {
+  --canvas: #f6f7f9;
+  --night: #171e29;
+  --ink: #222c3b;
+  --muted: #748091;
+  --border: #e0e5eb;
+  --accent: #df492c;
+  --accent-dark: #b93c24;
+  --mono: 'Cascadia Code', Consolas, monospace;
+}

@@ -1,0 +1,55 @@
+.statusPanel {
+  text-align: center;
+  padding: 38px 20px;
+  border: 1px dashed #d5dbe3;
+  border-radius: 9px;
+  background: #ffffff80;
+}
+
+.statusIcon {
+  display: inline-block;
+  color: #8a95a4;
+  margin-bottom: 13px;
+}
+
+.title {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.description {
+  color: var(--muted);
+  font-size: 13px;
+  max-width: 490px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.retryButton {
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.statusPanelError {
+  border-color: #e3b5ab;
+  background: #fff6f2;
+  margin-bottom: 20px;
+}
+
+.errorIcon {
+  color: var(--accent);
+}
+
+@media (max-width: 600px) {
+  .statusPanel {
+    padding: 30px 16px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+}

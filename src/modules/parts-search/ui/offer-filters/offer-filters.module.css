@@ -1,0 +1,103 @@
+.filters {
+  display: grid;
+  grid-template-columns: minmax(190px, 1.3fr) minmax(160px, 1fr) minmax(180px, 1fr) auto;
+  align-items: end;
+  gap: 16px;
+  padding: 20px 22px;
+  border-bottom: 1px solid var(--border);
+  background: #fafbfc;
+}
+
+.field,
+.searchField,
+.priceRange {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.label {
+  float: none;
+  width: auto;
+  margin: 0 0 8px;
+  color: #536073;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.input {
+  width: 100%;
+  min-width: 0;
+  height: 40px;
+  padding: 8px 10px;
+  border: 1px solid #ccd3dd;
+  border-radius: 6px;
+  background: white;
+  color: var(--ink);
+  font-size: 12px;
+}
+
+.input:focus {
+  border-color: var(--accent);
+}
+
+.input[aria-invalid='true'] {
+  border-color: var(--accent);
+}
+
+.priceInputs {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.separator {
+  color: var(--muted);
+}
+
+.resetButton {
+  min-height: 40px;
+  padding: 8px 0;
+  border: 0;
+  background: transparent;
+  color: var(--accent-dark);
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.resetButton:disabled {
+  color: var(--muted);
+  opacity: 0.6;
+}
+
+.error {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--accent-dark);
+  font-size: 12px;
+}
+
+@media (max-width: 900px) {
+  .filters {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .resetButton {
+    justify-self: end;
+  }
+}
+
+@media (max-width: 600px) {
+  .filters {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .resetButton {
+    justify-self: start;
+  }
+}

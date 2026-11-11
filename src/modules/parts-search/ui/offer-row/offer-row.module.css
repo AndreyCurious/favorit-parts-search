@@ -1,0 +1,168 @@
+.row {
+  border-bottom: 1px solid #edf0f3;
+}
+
+.row:last-child {
+  border-bottom: 0;
+}
+
+.cell {
+  padding: 21px 22px;
+  vertical-align: middle;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 900px) {
+  .cell {
+    padding-inline: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 12px;
+    padding: 19px 16px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .cell {
+    display: block;
+    padding: 0;
+    border: 0;
+  }
+
+  .cell::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 10px;
+    color: #88929e;
+    font-weight: 400;
+    margin-bottom: 6px;
+  }
+
+  .offerPrice {
+    grid-column: 1 / -1;
+    border-top: 1px solid #edf0f3;
+    padding-top: 12px;
+  }
+}
+
+.offerBrandLine {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 7px;
+}
+
+.brand {
+  font-size: 13px;
+  letter-spacing: 0.3px;
+}
+
+.typeBadge {
+  color: #637185;
+  background: #eef1f5;
+  border-radius: 4px;
+  font-size: 9px;
+  padding: 3px 6px;
+}
+
+.typeOriginal {
+  color: #ac492f;
+  background: #fbe9e2;
+}
+
+.offerName {
+  line-height: 1.6;
+  color: #526072;
+  font-size: 12px;
+}
+
+.offerNumber {
+  display: block;
+  font-family: var(--mono);
+  color: #89919e;
+  font-size: 11px;
+  margin-top: 5px;
+}
+
+.warehouseName {
+  color: #536073;
+  font-size: 12px;
+}
+
+.returnNote {
+  display: block;
+  font-size: 10px;
+  color: #8c6a47;
+  margin-top: 6px;
+}
+
+.stockLabel {
+  color: #858e9b;
+  font-size: 11px;
+}
+
+.inStock {
+  color: #24835d;
+  font-weight: 500;
+}
+
+.inStock::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: currentColor;
+  border-radius: 50%;
+  margin: 0 6px 2px 0;
+}
+
+.offerPrice {
+  text-align: right;
+  font-weight: 650;
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+}
+
+.priceUnit {
+  display: block;
+  font-size: 10px;
+  color: #9198a3;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.priceUnknown {
+  font-size: 11px;
+  color: #7f8997;
+  font-weight: 400;
+}
+
+@media (max-width: 600px) {
+  .offerProduct {
+    grid-column: 1 / -1;
+  }
+
+  .offerProduct::before {
+    display: none;
+  }
+
+  .offerPrice {
+    text-align: left;
+    font-size: 19px;
+  }
+
+  .priceUnit {
+    display: inline;
+    margin-left: 8px;
+  }
+
+  .offerPrice::before {
+    float: right;
+    margin-top: 6px;
+  }
+}

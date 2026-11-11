@@ -1,0 +1,42 @@
+.loadingPanel {
+  padding: 25px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  color: var(--muted);
+  background: white;
+  font-size: 13px;
+}
+
+.spinner {
+  margin-right: 12px;
+  color: var(--accent);
+}
+
+.skeletonLines {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 23px;
+}
+
+.skeletonLine {
+  height: 13px;
+  background: #edf0f4;
+  border-radius: 4px;
+  width: 90%;
+  animation: pulse 1.4s infinite alternate;
+}
+
+.shortLine {
+  width: 65%;
+}
+
+.mediumLine {
+  width: 80%;
+}
+
+@keyframes pulse {
+  to {
+    opacity: 0.45;
+  }
+}

@@ -1,0 +1,54 @@
+.pageHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 27px;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 10px;
+  letter-spacing: 1.6px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: clamp(30px, 3.8vw, 43px);
+  font-weight: 700;
+  letter-spacing: -1.8px;
+  margin-bottom: 12px;
+  line-height: 1.15;
+}
+
+.titleAccent {
+  color: var(--accent);
+}
+
+.pageDescription {
+  color: var(--muted);
+  font-size: 15px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .pageHeading {
+    display: block;
+    margin-bottom: 19px;
+  }
+
+  .title {
+    letter-spacing: -1px;
+    font-size: 31px;
+  }
+
+  .eyebrow {
+    font-size: 9px;
+  }
+
+  .pageDescription {
+    font-size: 13px;
+  }
+}

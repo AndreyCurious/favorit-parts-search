@@ -1,0 +1,102 @@
+.manufacturerGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.manufacturerCard {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: white;
+  color: var(--ink);
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+  min-height: 145px;
+  overflow-wrap: anywhere;
+}
+
+.manufacturerCard:hover {
+  border-color: #a4adb8;
+  box-shadow: 0 4px 14px #0f213008;
+}
+
+.isSelected {
+  border-color: var(--accent);
+  background: #fff9f6;
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+
+.manufacturerTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.icon {
+  color: #7b8796;
+  flex-shrink: 0;
+}
+
+.selectedIcon {
+  color: var(--accent);
+}
+
+.manufacturerName {
+  font-weight: 750;
+  font-size: 17px;
+  letter-spacing: 0.4px;
+}
+
+.manufacturerDescription {
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.manufacturerArticle {
+  margin-top: auto;
+  font-size: 10px;
+  color: #727d8d;
+}
+
+.articleNumber {
+  color: #4e5969;
+  font-family: var(--mono);
+  font-weight: 400;
+  margin-left: 6px;
+}
+
+@media (max-width: 900px) {
+  .manufacturerGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .manufacturerGrid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .manufacturerCard {
+    padding: 17px;
+    min-height: 124px;
+  }
+
+  .manufacturerDescription {
+    margin-bottom: 10px;
+  }
+
+  .manufacturerName {
+    font-size: 16px;
+  }
+}

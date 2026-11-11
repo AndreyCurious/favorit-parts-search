@@ -1,0 +1,73 @@
+.scrollContainer {
+  max-height: min(65vh, 680px);
+  overflow: auto;
+  scrollbar-gutter: stable;
+  overscroll-behavior: contain;
+  overflow-anchor: none;
+}
+
+.table {
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 12px;
+}
+
+.tableHead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #f9fafb;
+}
+
+.headerCell {
+  padding: 13px 22px;
+  border-bottom: 1px solid var(--border);
+  background: #f9fafb;
+  color: #7d8693;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.productColumn {
+  width: 46%;
+}
+.warehouseColumn {
+  width: 19%;
+}
+.stockColumn {
+  width: 16%;
+}
+.priceColumn {
+  text-align: right;
+}
+
+.spacer {
+  padding: 0;
+  border: 0;
+  line-height: 0;
+}
+
+@media (max-width: 900px) {
+  .headerCell {
+    padding-inline: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .scrollContainer {
+    max-height: 70svh;
+  }
+
+  .table,
+  .tableBody,
+  .spacer {
+    display: block;
+    width: 100%;
+  }
+
+  .tableHead {
+    display: none;
+  }
+}
